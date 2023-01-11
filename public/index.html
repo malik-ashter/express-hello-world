@@ -1,16 +1,60 @@
-<!doctype html>
-<html lang=en>
-  <head>
-    <meta charset=utf-8>
-    <title>Hello World</title>
-    <link rel="stylesheet" type="text/css" href="/main.css">
-    <link rel="icon" href="/favicon.ico" />
-  </head>
-  <body>
-    <div id="hello-wrapper">
-          <div id="hello">
-            Hello World!
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imam Ali Holy Shrine</title>
+    <link rel="stylesheet" href="/assets/css/app.css" />
+    <link rel="stylesheet" href="/build/css/intlTelInput.css" />
+    <link rel="icon" href="/resources/janna.jpg" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="/index.html">Imam Ali Holy Shrine</a>
+        <a>Quizz</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
     </div>
-  </body>
+
+    <div class="container">
+        <div id="home" class="flex-center flex-column">
+            <img id="banner" src="/resources/logo.png" />
+            <div class="card">
+                <h1 id="quizz-title" class="quizz-title-main flex-center flex-column"></h1>
+            </div>
+            <div class="card">
+                <p style="margin: 1.5rem; font-size: 1.2rem;">Prepared by the religious affairs department at Imam Ali holy shrine.</p>
+                <img id="mainImage" src="/resources/rpic.jpg" />
+            </div>
+
+            <form id="form" class="card">
+                <div class="form-container flex-center flex-column text-center margin-auto">
+                    <span class="input-field"><label for="userName"><p>Name:</p></label> <input type="text" id="useerName" name="userName" class="input" required/></span>
+                    <span class="input-field"><label for="gender"><p>Gender:</p></label> 
+                        <span class="options">
+                            <input type="radio" name="gender" value="male"><p>Male</p>
+                            <input type="radio" name="gender" value="female"><p>Female</p></span>
+                        </span>
+                    <span class="input-field"><label for="age"><p>Age:</p></label>  <input type="text" id="age" name="age"  class="input"/></span>
+                    <span class="input-field"><label for="mobile"><p>Mobile No:</p></label> <input type="tel" id="mobile" name="mobile"  class="input" required/></span>
+                    <span class="input-field">
+                        <label for="quizzLanguage"><p>Language:</p></label>
+                        <select name="quizzLanguage" id="quizzLanguage" class="input" required>
+                        </select>
+                    </span>
+                    <p id="submit-error" class="text-center error-message" style="display:none">Error during form submission. Please try again later.</p>
+                    <input id="submitBtn" class="btn" type="button" value="Start Quizz" />
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/build/js/intlTelInput.js"></script>
+    <script type="text/javascript" src="/assets/javascript/constants.js"></script>
+    <script type="text/javascript" src="/assets/javascript/utils.js"></script>
+    <script type="text/javascript" src="/assets/javascript/app.js"></script>
+</body>
 </html>
